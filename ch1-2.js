@@ -12,9 +12,7 @@ function A(x,y)
 //A(2, n) --> 
 
 
-function pascal(n)
+function gcd(x, y)
 {
-
+    return y === 0 ? abs(x) : gcd(y, x % y) ;  
 }
-
-
