@@ -66,7 +66,7 @@ function is_good_enough(guess, x)
 
 
 
-//cube root 
+//Exercise 1.8 -- cube root 
 function cbrt(x)
 {
     return cbrt_iter(1, x);

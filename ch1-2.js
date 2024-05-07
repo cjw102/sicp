@@ -1,4 +1,4 @@
-//Ackermann's function
+//Exercise 1.10 -- Ackermann's function
 function A(x,y)
 {
     return y === 0 ? 0 

@@ -1,7 +1,7 @@
 //from the website https://dev.to/acsreedharreddy/represent-pair-data-structure-using-functions-4ecp
 function pair(m, n)
 {
-    return (val) => (val === 0 ? m : n);
+    return (val) => (val === 0 ? m : val === 1 ? n : error(val, "arg not 0 or 1") );
 }
 
 function head(p)
@@ -12,6 +12,22 @@ function head(p)
 function tail(p)
 {
     return p(1);
+}
+
+//exercise 2.4 -- an alternate representation of pair()
+function pair2(x, y)
+{
+    return val => val(x, y)
+}
+
+function head2(p)
+{
+    return p((x, y) => x);
+}
+
+function tail2(p)
+{
+    return p((x, y) => y);
 }
 
 function Fraction(n,d)
