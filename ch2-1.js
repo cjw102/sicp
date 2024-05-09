@@ -14,7 +14,7 @@ function tail(p)
     return p(1);
 }
 
-//exercise 2.4 -- an alternate representation of pair()
+//from Exercise 2.4 -- an alternate representation of pair()
 function pair2(x, y)
 {
     return val => val(x, y)

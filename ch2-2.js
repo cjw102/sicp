@@ -4,12 +4,11 @@ function list()
     return args.length === 0 ? null : pair(args[0], list(...args.slice(1)));
 }
 
-
 function ls_size(lst)
 {
     function counter(lst, n)
     {
-        return lst === null ? n : counter(tail(lst), ++n);
+        return lst === null ? n : counter(tail(lst), n + 1);
     }
 
     return counter(lst, 0);
@@ -30,16 +29,18 @@ function append(lst1, lst2)
     return lst1 === null ? lst2 : pair(head(lst1), append(tail(lst1), lst2));
 }
 
+//Exercise 2.18
+function reverse(lst)
+{
+
+}
+
 function print_ls(lst)
 {
-    var curr = head(lst);
-    var str = ""+curr;
-
-    function str_app()
+    function str_app(lst, str)
     {
-        curr = head(tail(lst))
-        str += ""+curr;
+        return lst === null ? str+')' : str_app(tail(lst), str = str +head(lst)+',');
     }
 
-    return tail(curr) === null ? str : str_app();
+    return str_app(lst, '(');
 }

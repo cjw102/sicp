@@ -16,3 +16,19 @@ function gcd(x, y)
 {
     return y === 0 ? abs(x) : gcd(y, x % y) ;  
 }
+
+
+function is_prime(n)
+{
+    function iter(div)
+    {
+        return div === 1 ? true : n % div === 0 ? false : iter(div - 1);
+    }
+
+    return iter(floor(sqrt(n)));
+}
+
+function floor(n)
+{
+    return n - n%1;
+}
