@@ -28,9 +28,9 @@ function identity(x)
     return x;
 }
 
-function mySigma(func, a, b)
+function my_sigma(func, a, b)
 {
-    return a > b ? 0 : func(a) + mySigma(func, a + 1, b);
+    return a > b ? 0 : func(a) + my_sigma(func, a + 1, b);
 }
 
 function my_sum(a, b)

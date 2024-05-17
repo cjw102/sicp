@@ -12,6 +12,17 @@ function A(x,y)
 //A(2, n) --> 
 
 
+function factorial(n)
+{
+    return n===1 ? 1 : n * factorial(n - 1);
+}
+
+function fib(n)
+{
+    return n===0 || n===1 ? n : fib(n - 1) + fib(n - 2);
+}
+
+
 function gcd(x, y)
 {
     return y === 0 ? abs(x) : gcd(y, x % y) ;  

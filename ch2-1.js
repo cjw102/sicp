@@ -71,7 +71,7 @@ function eq_rat(x,y)
     return numer(x) * denom(y) === numer(y) * denom(x);
 }
 
-function pfrac(r)
+function print_frac(r)
 {
     return JSON.stringify(numer(r)) + '/' + JSON.stringify(denom(r));
 }
