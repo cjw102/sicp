@@ -1,4 +1,5 @@
-//from the website https://dev.to/acsreedharreddy/represent-pair-data-structure-using-functions-4ecp
+//originally from the website https://dev.to/acsreedharreddy/represent-pair-data-structure-using-functions-4ecp
+//but then later I actually found this method in the book
 function pair(m, n)
 {
     return (val) => (val === 0 ? m : val === 1 ? n : error(val, "arg not 0 or 1") );
@@ -91,8 +92,21 @@ function foo()
     return (n) => (n===0 ? x = x+1 : y = 2*y);
 }
 
-
-function um()
+//Exercise 2.6
+const zero = f => x => x;
+function add_1(n)
 {
-    return 2;
+    return f => x => f(n(f)(x));
 }
+
+//Lambda Calculus!!!
+const True  = a=>b=>a;
+const False = a=>b=>b;
+const If    = cond=>a=>b=>cond(a)(b);
+const Not   = a=>a(False)(True);
+const And   = a=>b=>(If(a)(If(b)(True)(False))(False));
+const Nand  = a=>b=>Not(And(a)(b)); // W00o0W - now we can make computers!!
+const Or    = a=>b=>(If(a)(True)(If(b)(True)(False)));
+const Nor   = a=>b=>Not(Or(a)(b));
+const Xor   = a=>b=>( If(a)(If(b)(False)(True))(If(b)(True)(False)) );
+const Xnor  = a=>b=>Not(Xor(a)(b));
